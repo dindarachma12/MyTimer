@@ -63,27 +63,21 @@ class _TimerScreenState extends State<TimerScreen> {
         ),
         child: Padding(
           padding: EdgeInsets.all(20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Column(
                 children: <Widget>[
                   Text(
                     'Name: ${widget.name}',
-                    style: TextStyle(fontSize: 24, color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   ),
                   SizedBox(height: 10),
                   Text(
                     'NIM: ${widget.nim}',
-                    style: TextStyle(fontSize: 24, color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                ],
-              ),
-            ],
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: Column(
-                children: <Widget> [
+                  SizedBox(height: 20),
                   Text(
                     _seconds > 0
                         ? '${(_seconds ~/ 60).toInt()} menit ${(_seconds % 60).toInt()} detik'
@@ -129,7 +123,7 @@ class _TimerScreenState extends State<TimerScreen> {
                   ),
                 ],
               ),
-            ),
+            ],
           ),
         ),
       ),
